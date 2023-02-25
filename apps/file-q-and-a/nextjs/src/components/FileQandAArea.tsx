@@ -104,11 +104,11 @@ function FileQandAArea(props: FileQandAAreaProps) {
       </div>
       <div className="space-y-2">
         <input
-          className="border rounded border-gray-200 w-full py-1 px-2"
+        name="search"
+        ref={questionRef}
+         onKeyDown={handleEnterInSearchBar}         
+         className="border rounded border-gray-200 w-full py-1 px-2"
           placeholder="e.g. What were the key takeaways from the Q1 planning meeting?"
-          name="search"
-          ref={questionRef}
-          onKeyDown={handleEnterInSearchBar}
         />
         <div
           className="rounded-md bg-gray-50 py-1 px-4 w-max text-gray-500 hover:bg-gray-100 border border-gray-100 shadow cursor-pointer"
